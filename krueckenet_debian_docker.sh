@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 function msg_info() {
     local msg="$1"
     echo -ne "${msg}"
