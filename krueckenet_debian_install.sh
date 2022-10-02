@@ -2,10 +2,10 @@
 
 function msg_info() {
     local msg="$1"
-    echo -ne "${msg}"
+    echo -ena "${msg} /n /a"
 }
 
-msg_info "Beginne Container installation"
+msg_info "Beginne mit Container Installation"
 
 sed -i "/$LANG/ s/\(^# \)//" /etc/locale.gen
 locale-gen >/dev/null
@@ -34,4 +34,4 @@ systemctl restart $(basename $(dirname $GETTY_OVERRIDE) | sed 's/\.d//')
 apt-get autoremove >/dev/null
 apt-get autoclean >/dev/null
 
-msg_info "Scheint geklappt zu haben"
+msg_info "Fertig"
