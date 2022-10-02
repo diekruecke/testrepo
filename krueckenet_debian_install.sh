@@ -2,7 +2,7 @@
 
 function msg_info() {
     local msg="$1"
-    echo -ena "${msg} /n /a"
+    echo -e "${msg}"
 }
 
 msg_info "Beginne mit Container Installation"
