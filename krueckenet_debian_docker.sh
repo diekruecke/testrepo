@@ -2,10 +2,10 @@
 
 function msg_info() {
     local msg="$1"
-    echo -ne "${msg}"
+    echo -na "${msg} /n /a"
 }
 
-msg_info "Beginne Docker installation"
+msg_info "Beginne Docker Installation"
 
 apt-get update &>/dev/null
 apt-get -y install ca-certificates curl gnupg lsb-release &>/dev/null
