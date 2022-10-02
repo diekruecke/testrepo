@@ -1,4 +1,12 @@
 #!/usr/bin/env bash
+
+function msg_info() {
+    local msg="$1"
+    echo -ne "${msg}"
+}
+
+msg_info "Beginne Container installation"
+
 sed -i "/$LANG/ s/\(^# \)//" /etc/locale.gen
 locale-gen >/dev/null
 
@@ -25,3 +33,5 @@ systemctl restart $(basename $(dirname $GETTY_OVERRIDE) | sed 's/\.d//')
 
 apt-get autoremove >/dev/null
 apt-get autoclean >/dev/null
+
+msg_info "Scheint geklappt zu haben"
