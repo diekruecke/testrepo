@@ -2,7 +2,7 @@
 
 function msg_info() {
     local msg="$1"
-    echo -na "${msg} /n /a"
+    echo -ena "${msg} /n /a"
 }
 
 msg_info "Beginne Docker Installation"
